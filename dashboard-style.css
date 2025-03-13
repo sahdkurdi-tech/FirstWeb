@@ -1,0 +1,262 @@
+/* تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* خلفية ثلاثية الأبعاد */
+#three-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* صندوق لوحة التحكم */
+.dashboard-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* الشعار المتحرك */
+.header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.header i {
+    font-size: 60px;
+    color: #6e8efb;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #6e8efb, 0 0 20px #6e8efb, 0 0 30px #6e8efb;
+    }
+    to {
+        text-shadow: 0 0 20px #6e8efb, 0 0 40px #6e8efb, 0 0 60px #6e8efb;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+}
+
+/* أزرار لوحة التحكم */
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.glow-button {
+    position: relative;
+    padding: 12px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.5);
+}
+
+.glow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+}
+
+.glow-button:hover::before {
+    left: 100%;
+}
+
+.glow-button:hover {
+    transform: scale(1.05);
+}
+
+/* منطقة عرض المحتوى */
+#contentArea {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    min-height: 150px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* زر تسجيل الخروج */
+.logout-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* تعريف الخط المخصص */
+@font-face {
+    font-family: 'NRT'; /* اسم الخط الذي سنستخدمه */
+    src: url('fonts/NRT.ttf') format('truetype'); /* مسار ملف الخط */
+}
+
+/* تطبيق الخط على جميع العناصر النصية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NRT', Arial, sans-serif; /* استخدام الخط المخصص */
+}
+
+body {
+    font-family: 'NRT', Arial, sans-serif; /* التأكد من استخدام الخط في الجسم الرئيسي */
+    background-color: #0f0f0f;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NRT', Arial, sans-serif; /* الخط المخصص */
+}
+
+body {
+    font-family: 'NRT', Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* خلفية ثلاثية الأبعاد */
+#three-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* صندوق تسجيل الدخول */
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px; /* تقليل المساحة الداخلية */
+        max-width: 90%; /* زيادة العرض ليتناسب مع الشاشة */
+    }
+
+    h2 {
+        font-size: 20px; /* تقليل حجم العنوان */
+    }
+
+    p {
+        font-size: 12px; /* تقليل حجم النصوص */
+    }
+
+    .input-group input {
+        font-size: 14px; /* تقليل حجم خط الحقول */
+    }
+
+    .glow-button {
+        font-size: 14px; /* تقليل حجم خط الزر */
+    }
+}
+
+.logout-button:hover {
+    background: #e53935;
+}

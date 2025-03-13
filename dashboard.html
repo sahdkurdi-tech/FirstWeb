@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+    <!-- إضافة مكتبة FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <!-- خلفية ثلاثية الأبعاد -->
+    <div id="three-background"></div>
+
+    <!-- صندوق لوحة التحكم -->
+    <div class="dashboard-container">
+        <!-- شعار وعناوين -->
+        <div class="header">
+            <i class="fas fa-tachometer-alt animated-logo"></i>
+            <h2>لوحة التحكم</h2>
+            <p>مرحبًا بك، <span id="username"></span></p>
+        </div>
+
+        <!-- أزرار لوحة التحكم -->
+        <div class="buttons-container">
+            <button class="glow-button" id="infoFormButton">فۆڕمی زانیاری</button>
+            <button class="glow-button" id="subscribersFormButton">فۆڕمی ڕاگیراوان</button>
+            <button class="glow-button" id="complaintsFormButton">فۆڕمی ناپەسەند</button>
+            <button class="glow-button" id="longTermIllnessButton">نەخۆشی درێژخایەن</button>
+            <button class="glow-button" id="createdHousesButton">خانووی بۆ دروستکراوە</button>
+            <button class="glow-button" id="beneficiariesFormButton">فۆڕمی سوودمەندبووان</button>
+            <button class="glow-button" id="beneficiariesListButton">لیستی سوودمەندبووان</button>
+            <button class="glow-button" id="monthlyCollaboratorsButton">لیستی هاوکاری مانگانە</button>
+            <button class="glow-button" id="globalSearchButton">گەڕانی گشتی</button>
+            <button class="glow-button" id="subscribersListButton">لیستی ڕاگیراوان</button>
+            <button class="glow-button" id="complaintsListButton">لیستی ناپەسەندەکان</button>
+            <button class="glow-button" id="housesListButton">لیستی خانوو بۆ کراوەکان</button>
+            <button class="glow-button" id="illnessesListButton">لیستی نەخۆشە درێژخایەنەکان</button>
+            <button class="glow-button" id="notificationsButton">ئاگادریەکان</button>
+        </div>
+
+        <!-- منطقة عرض المحتوى -->
+        <div id="contentArea">
+            <!-- سيتم عرض المحتوى هنا عند النقر على الأزرار -->
+        </div>
+
+        <!-- زر تسجيل الخروج -->
+        <button id="logoutButton" class="logout-button">تسجيل الخروج</button>
+    </div>
+
+    <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script src="dashboard.js"></script>
+    <!-- إضافة Three.js لخلفية ثلاثية الأبعاد -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>

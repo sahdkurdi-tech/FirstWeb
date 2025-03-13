@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="login-style.css">
+    <!-- إضافة مكتبة FontAwesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <!-- خلفية ثلاثية الأبعاد -->
+    <div id="three-background"></div>
+
+    <!-- صندوق تسجيل الدخول -->
+    <div class="login-container">
+        <!-- شعار -->
+        <div class="logo">
+            <i class="fas fa-user-circle animated-logo"></i>
+            <h2>مرحبًا بك</h2>
+            <p>يرجى تسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور</p>
+        </div>
+
+        <!-- نموذج تسجيل الدخول -->
+        <form id="loginForm">
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+            </div>
+
+            <!-- زر تسجيل الدخول -->
+            <button type="submit" class="glow-button">تسجيل الدخول</button>
+
+            <!-- رسالة الخطأ -->
+            <p id="message" class="error-message"></p>
+
+            <!-- رابط نسيت كلمة المرور -->
+            <a href="#" id="forgotPassword">نسيت كلمة المرور؟</a>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/parse/dist/parse.min.js"></script>
+    <script src="script.js"></script>
+    <!-- إضافة Three.js لخلفية ثلاثية الأبعاد -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>
